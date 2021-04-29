@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <title>profiles</title>
+    <style>
+      body {
+      }
+      #fbgif {
+        position: fixed;
+        background-color: black;
+        right: 10px;
+        top: 10px;
+        width: 200px;
+      }
+      #iggif {
+        position: fixed;
+        background-color: black;
+        right: 900px;
+        top: 600px;
+        width: 100px;
+      }
+      #ligif {
+        position: fixed;
+        background-color: black;
+        right: 1200px;
+        top: 100px;
+        width: 250px;
+      }
+      #tgif {
+        position: fixed;
+        background-color: black;
+        right: 200px;
+        top: 340px;
+        width: 150px;
+      }
+      #vgif {
+        position: fixed;
+        background-color: black;
+        right: 400px;
+        top: 180px;
+        width: 350px;
+      }
+      #fb {
+        position: fixed;
+        background-color: black;
+        left: 900px;
+        top: 200px;
+        width: 300px;
+        border-radius: 50%;
+      }
+      #ig {
+        position: fixed;
+        background-color: black;
+        left: 100px;
+        top: 550px;
+        width: 400px;
+        border-radius: 50%;
+      }
+      #li {
+        position: fixed;
+        background-color: black;
+        left: 400px;
+        top: 300px;
+        width: 250px;
+        border-radius: 50%;
+      }
+      #tw {
+        position: fixed;
+        background-color: black;
+        left: 100px;
+        top: 200px;
+        width: 150px;
+        border-radius: 50%;
+      }
+      #twg {
+        position: fixed;
+        background-color: black;
+        right: 300px;
+        top: 550px;
+        width: 200px;
+      }
+      #vi {
+        position: fixed;
+        background-color: black;
+        right: 100px;
+        top: 450px;
+        width: 300px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="fbgif" src="https://i.imgur.com/UunpVpw.gif">
+    <img id="iggif" src="https://i.imgur.com/o6bOBxj.gif">
+    <img id="ligif" src="https://i.imgur.com/uFm9dPW.gif">
+    <img id="tgif" src="https://i.imgur.com/xr1IIYY.gif">
+    <img id="vgif" src="https://i.imgur.com/bSzE1t9.gif">
+    <img id="fb" src="https://i.imgur.com/GY0MWn1.png">
+    <img id="ig" src="https://i.imgur.com/WOqIS4t.png">
+    <img id="li" src="https://i.imgur.com/iHiEPnZ.png">
+    <img id="tw" src="https://i.imgur.com/Ul90FkA.png">
+    <img id="twg" src="https://i.imgur.com/bDRUmks.png">
+    <img id="vi" src="https://i.imgur.com/oHzMPd4.png">
+  </body>
+</html>
