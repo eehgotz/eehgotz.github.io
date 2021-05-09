@@ -7,7 +7,9 @@
   </head>
   <body>
     <a-scene>
-      <!-- the grid -->
+      <!--<a-asset-item id="globe-obj" src="https://cdn.glitch.com/ceb4e98c-5fb0-4b58-bde2-29fc64b7522b%2FScan.obj?v=1620504969712"></a-asset-item>
+      <a-asset-item id="globe-mtl" src="https://cdn.glitch.com/ceb4e98c-5fb0-4b58-bde2-29fc64b7522b%2FScan.mtl?v=1620505364376"></a-asset-item>
+       the grid
       <a-plane
         src="https://i.imgur.com/IBlyQtP.jpg"
         shader="flat"
@@ -25,7 +27,7 @@
         height="400"
         repeat="10 10"
         position="0 20 0">
-      </a-plane>
+      </a-plane> -->
       <!-- the pngs -->
       <a-image id="tree"
         src="https://i.imgur.com/qB3O16a.png"
@@ -51,15 +53,74 @@
         width=".6"
         position="-1 2 -2">
       </a-image>
-      <a-text
-        value="Use the arrrow keys to move and the mouse to look around."
-        align="center"
-        color="black"
-        position="0 1 -1"
-        opacity=".3"
-        wrapCount="100"
-        scale=".2 .2 .2">
-      </a-text>
+      <a-image id="landscape"
+        src="https://i.imgur.com/2069vaG.png"
+        rotation="0 90 0"
+        height="20"
+        width="22"
+        position="-15 0 0">
+      </a-image>
+      <a-image id="ao dai wood"
+        src="https://i.imgur.com/FaMII6B.png"
+        rotation="0 90 0"
+        height="3"
+        width="3"
+        position="-3 1 2">
+      </a-image>
+      <a-image id="boat"
+        src="https://i.imgur.com/MLNt1fn.png"
+        rotation="0 180 0"
+        height="20"
+        width="25"
+        position="0 0 15">
+      </a-image>
+      <a-image id="ao dai glass"
+        src="https://i.imgur.com/4PnJCdc.png"
+        rotation="0 180 0"
+        height="3"
+        width="3"
+        position="0 1 5">
+      </a-image>
+      <a-image id="garden"
+        src="https://i.imgur.com/VJnPTeW.png"
+        rotation="0 270 0"
+        height="2"
+        width="2"
+        position="3 1 0">
+      </a-image>
+      <a-image id="instruct"
+        src="https://i.imgur.com/gtBitG0.png"
+        rotation="270 0 0"
+        height="3"
+        width="3"
+        position="0 -1 -4">
+      </a-image>
+      <a-image id="proverb"
+        src="https://i.imgur.com/6QozVcI.png"
+        rotation="270 270 180"
+        height="3"
+        width="3"
+        position="-4 -1 0">
+      </a-image>
+      <a-image id="thao"
+        src="https://i.imgur.com/WNIJ6hS.png"
+        rotation="270 0 180"
+        height="3"
+        width="3"
+        position="0 -1 4">
+      </a-image>
+      <a-image id="ocean"
+        src="https://i.imgur.com/x01yDcx.png"
+        rotation="270 90 180"
+        height="3"
+        width="3"
+        position="3 -1 0">
+      </a-image>
+      <a-entity
+        obj-model="obj: #globe-obj; mtl: #globe-mtl"
+        scale="3 3 3"
+        position="0 15 0">
+      </a-entity>
       <a-sky color="#fffae6" shader="flat"></a-sky>
       <a-camera>
         <a-cursor></a-cursor>
