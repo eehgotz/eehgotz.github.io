@@ -1,6 +1,9 @@
 <html>
   <head>
     <title>duplications</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="chat.js"></script>
     <style>
       body {
         background-color: white;
@@ -9,7 +12,7 @@
         position: relative;
         color: blue;
         text-decoration-line: underline;
-        width: 900px;
+        width: 10px;
         left: 60px;
         top: 60px;
         font-size: 20px;
@@ -18,16 +21,72 @@
         line-height: 40px;
         text-align: left;
       }
+      #chatbot {
+        position: absolute;
+        width: 7vw;
+        right: 10vw;
+        top: 77vh;
+      }
+      #chatfield {
+        display: none;
+        position: absolute;
+        right: 4vw;
+        top: 4vw;
+      }
+      #line1 {
+        display:none;
+        position: absolute;
+        color: white;
+        background-color: blue;
+        border: 10px solid blue;
+        border-radius: 20px;
+        font-size: 15px;
+        font-family: "Helvetica";
+        letter-spacing: 1px;
+        right: 6vw;
+        top:5vw;
+      }
+      #line2 {
+        display:none;
+        position: absolute;
+        color: white;
+        background-color: blue;
+        border: 10px solid blue;
+        border-radius: 20px;
+        font-size: 15px;
+        font-family: "Helvetica";
+        letter-spacing: 1px;
+        width: 15vw;
+        right: 6vw;
+        top:10vw;
+      }
+      #input1 {
+        display: none;
+        position: absolute;
+        right: 13vw;
+        top: 90vh;
+      }
+      #input2 {
+        display: none;
+        position: absolute;
+        right: 13vw;
+        top: 90vh;
+      }
     </style>
   </head>
   <body>
-    <a href="https://eehgotz.github.io/glitch_media"><div id=link>PROFILES</div></a>
-    <a href="https://eehgotz.github.io/entry"><div id=link>HOME TOUR</div></a>
-    <a href="https://www.are.na/share/AiGFMJd"><div id=link>SEARCHING</div></a>
-    <a href="https://docs.google.com/document/d/1bY9vO7fM-WnU9ylPP3cQeHGOVm8yZU4bOJNb0RS489w/edit?usp=sharing"><div id=link>DISSOCIATE</div></a>
-    <a href="https://eehgotz.github.io/messages"><div id=link>MESSAGES</div></a>
-    <a href="https://eehgotz.github.io/viet_am"><div id=link>GENEALOGY</div></a>
+    <a href="https://eehgotz.github.io/glitch_media"><div id=link>SEE</div></a>
+    <a href="https://eehgotz.github.io/zoom"><div id=link>HEAR</div></a>
+    <a href="https://eehgotz.github.io/messages"><div id=link>SPEAK</div></a>
+    <a href="https://docs.google.com/document/d/1bY9vO7fM-WnU9ylPP3cQeHGOVm8yZU4bOJNb0RS489w/edit?usp=sharing"><div id=link>MOVE</div></a>
+    <a href="https://eehgotz.github.io/viet_am"><div id=link>FEEL</div></a>
+    <a href="https://www.are.na/share/AiGFMJd"><div id=link>SEARCH</div></a>
     <a href="https://docs.google.com/document/d/1voIxL4OXbLlUsPBWAnORVfzAwCrqwi6gKSzQIH6x6eI/edit?usp=sharing"><div id=link>WRITE</div></a>
-    <a href="https://eehgotz.github.io/zoom"><div id=link>SPEAK</div></a>
+    <div id="chatfield" style="width:20vw;height:40vw;border:2px solid #000; border-radius:15px;"></div>
+    <div><input id="input1" type="text" placeholder="What's up..." autocomplete="off"></div>
+    <div><input id="input2" type="text" placeholder="..." autocomplete="off"></div>
+    <img id=chatbot src="https://i.imgur.com/DzFGoEn.png">
+    <h1 id="line1">hello</h1>
+    <h1 id="line2">screamingggggggggggggggggggggg</h1>
   </body>
 </html>
