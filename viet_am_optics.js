@@ -1,0 +1,3 @@
+$(document).ready(function() {
+  alert("A few notes...this website isn't done:( but! this also means I have time for feedback. So, first of all directions. Click and drag to look around, and use the arrow keys to move. Second, when you're done refresh the page so the next visitor sees this message. Third, the concept is centered around my experience as a second(-ish) gen Viet-American, and the weird space of not really know much about my motherland but is kind of blurrily recreated through photos, prints, and glass resist pieces. Ideally, all of this concept and directions will be embedded in the site itself. But I ran out of time and this class is really about the glass pieces anyways lol");
+  })
