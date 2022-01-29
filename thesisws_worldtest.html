@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>test</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <style>
+      #about:link {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 120px;
+        top: 93vh;
+        right: 90px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #about:visited {
+        color: white;
+      }
+      #about:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="thesis_about.html"<div id=about>About</div></a>
+    <a-scene>
+      <a-box
+        color="pink"
+        scale="2 2 2"
+        position="5 1.5 -5">
+      </a-box>
+      <a-entity
+        geometry="primitive:plane"
+        material="src:https://i.imgur.com/JN6WIfl.jpg"
+        position="-5 3 -5"
+        width="10" height="20"
+        scale="2 3 1">
+      </a-entity>
+      <a-light type="ambient" color="#f2f2f2"></a-light>
+      <a-light type="point" position="8 10 -3" intensity=".5"></a-light>
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
