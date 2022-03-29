@@ -1,0 +1,450 @@
+<html>
+  <head>
+    <title>About</title>
+    <link rel="shortcut icon" href="https://i.imgur.com/pgXeBAd.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+      	<script src="thesis_about.js"></script>
+    <style>
+      body {
+        background-color: #faebf4;
+      }
+      h1 {
+        position: relative;
+        color: #422a70;
+        width: 900px;
+        left: 60px;
+        top: 50px;
+        font-size: 30px;
+        font-family: "Courier New";
+        letter-spacing: 5px;
+        text-align: left;
+        z-index: -1;
+      }
+      h2 {
+        position: relative;
+        color: black;
+        width: 50vw;
+        left: 90px;
+        top: 10vh;
+        font-size: 20px;
+        font-family: "Helvetica";
+        text-align: justify;
+      }
+      #italics {
+        font-style:italic;
+      }
+      #bottom {
+        padding-bottom: 25px;
+      }
+      #feedbackLoop {
+        color: #d14e9c;
+      }
+      #feedbackLoop:hover {
+        color: black;
+        cursor: help;
+      }
+      #feedbackLoopDefinition {
+        position: fixed;
+        color: white;
+        background-color:#46318c;
+        padding: 10px;
+        width: 30vw;
+        right: 50px;
+        top: 50px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: left;
+        display:none;
+      }
+      #bibOne {
+        color: #d14e9c;
+        font-size:10px;
+        vertical-align: super;
+      }
+      #bibOne:hover {
+        color: black;
+        cursor: help;
+      }
+      #bibOneSource {
+        position: fixed;
+        color: white;
+        background-color:#46318c;
+        padding: 10px;
+        width: 30vw;
+        right: 50px;
+        top: 50px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: left;
+        display:none;
+      }
+      #heterotopia {
+        color: #d14e9c;
+      }
+      #heterotopia:hover {
+        color: black;
+        cursor: help;
+      }
+      #heterotopiaDefinition {
+        position: fixed;
+        color: white;
+        background-color:#46318c;
+        padding: 10px;
+        width: 30vw;
+        right: 50px;
+        top: 50px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: left;
+        display:none;
+      }
+      #bibTwo {
+        color: #d14e9c;
+        font-size:10px;
+        vertical-align: super;
+      }
+      #bibTwo:hover {
+        color: black;
+        cursor: help;
+      }
+      #bibTwoSource {
+        position: fixed;
+        color: white;
+        background-color:#46318c;
+        padding: 10px;
+        width: 30vw;
+        right: 50px;
+        top: 50px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: left;
+        display:none;
+      }
+      #projection {
+        color: #d14e9c;
+      }
+      #projection:hover {
+        color: black;
+        cursor: help;
+      }
+      #projectionDefinition {
+        position: fixed;
+        color: white;
+        background-color:#46318c;
+        padding: 10px;
+        width: 30vw;
+        right: 50px;
+        top: 50px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: left;
+        display:none;
+      }
+      #orient {
+        color: #d14e9c;
+      }
+      #orient:hover {
+        color: black;
+        cursor: help;
+      }
+      #orientTwo {
+        color: #d14e9c;
+      }
+      #orientTwo:hover {
+        color: black;
+        cursor: help;
+      }
+      #orientDefinition {
+        position: fixed;
+        color: white;
+        background-color:#46318c;
+        padding: 10px;
+        width: 30vw;
+        right: 50px;
+        top: 50px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: left;
+        display:none;
+      }
+      #bibThree {
+        color: #d14e9c;
+        font-size:10px;
+        vertical-align: super;
+      }
+      #bibThree:hover {
+        color: black;
+        cursor: help;
+      }
+      #bibThreeSource {
+        position: fixed;
+        color: white;
+        background-color:#46318c;
+        padding: 10px;
+        width: 30vw;
+        right: 50px;
+        top: 50px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: left;
+        display:none;
+      }
+      #bibFour {
+        color: #d14e9c;
+        font-size:10px;
+        vertical-align: super;
+      }
+      #bibFour:hover {
+        color: black;
+        cursor: help;
+      }
+      #bibFourSource {
+        position: fixed;
+        color: white;
+        background-color:#46318c;
+        padding: 10px;
+        width: 30vw;
+        right: 50px;
+        top: 50px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: left;
+        display:none;
+      }
+      #specFic {
+        color: #d14e9c;
+      }
+      #specFic:hover {
+        color: black;
+        cursor: help;
+      }
+      #specFicDefinition {
+        position: fixed;
+        color: white;
+        background-color:#46318c;
+        padding: 10px;
+        width: 30vw;
+        right: 50px;
+        top: 50px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: left;
+        display:none;
+      }
+      #bibFive {
+        color: #d14e9c;
+        font-size:10px;
+        vertical-align: super;
+      }
+      #bibFive:hover {
+        color: black;
+        cursor: help;
+      }
+      #bibFiveSource {
+        position: fixed;
+        color: white;
+        background-color:#46318c;
+        padding: 10px;
+        width: 30vw;
+        right: 50px;
+        top: 50px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: left;
+        display:none;
+      }
+      #cyberpunk {
+        color: #d14e9c;
+      }
+      #cyberpunk:hover {
+        color: black;
+        cursor: help;
+      }
+      #cyberpunkDefinition {
+        position: fixed;
+        color: white;
+        background-color:#46318c;
+        padding: 10px;
+        width: 30vw;
+        right: 50px;
+        top: 50px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: left;
+        display:none;
+      }
+      #representation {
+        color: #d14e9c;
+      }
+      #representation:hover {
+        color: black;
+        cursor: help;
+      }
+      #representationDefinition {
+        position: fixed;
+        color: white;
+        background-color:#46318c;
+        padding: 10px;
+        width: 30vw;
+        right: 50px;
+        top: 50px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: left;
+        display:none;
+      }
+      #cyborgian {
+        color: #d14e9c;
+      }
+      #cyborgian:hover {
+        color: black;
+        cursor: help;
+      }
+      #cyborgianDefinition {
+        position: fixed;
+        color: white;
+        background-color:#46318c;
+        padding: 10px;
+        width: 30vw;
+        right: 50px;
+        top: 50px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: left;
+        display:none;
+      }
+      #cybernetics {
+        color: #d14e9c;
+      }
+      #cybernetics:hover {
+        color: black;
+        cursor: help;
+      }
+      #cyberneticsDefinition {
+        position: fixed;
+        color: white;
+        background-color:#46318c;
+        padding: 10px;
+        width: 30vw;
+        right: 50px;
+        top: 50px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: left;
+        display:none;
+      }
+      #postUrban {
+        color: #d14e9c;
+      }
+      #postUrban:hover {
+        color: black;
+        cursor: help;
+      }
+      #postUrbanDefinition {
+        position: fixed;
+        color: white;
+        background-color:#46318c;
+        padding: 10px;
+        width: 30vw;
+        right: 50px;
+        top: 50px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: left;
+        display:none;
+      }
+      #bibSix {
+        color: #d14e9c;
+        font-size:10px;
+        vertical-align: super;
+      }
+      #bibSix:hover {
+        color: black;
+        cursor: help;
+      }
+      #bibSixSource {
+        position: fixed;
+        color: white;
+        background-color:#46318c;
+        padding: 10px;
+        width: 30vw;
+        right: 50px;
+        top: 50px;
+        font-size: 20px;
+        font-family: Helvetica;
+        opacity: .6;
+        text-align: left;
+        display:none;
+      }
+      #logo {
+        position: absolute;
+        width: 60px;
+        left: 500px;
+        top: 50px;
+        opacity: .5;
+        z-index: -10;
+      }
+      #appendix:link {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 160px;
+        top: 90vh;
+        right: 60px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+      }
+      #appendix:visited {
+        color: white;
+      }
+      #appendix:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Company Philosophy</h1>
+    <h2>Our name comes from the <span id=feedbackLoop>Feedback Loop</span> between physical cities and their representations.<span id=bibOne>1</span> Cities, and their perceptions, are constructed by a community as an output; over time, those perceptions are projected back onto the city as input. The projected image of the city directly influences the physical via human interjections, and so, the Loop is completed. In contemporary thought, these intermediate perceptions are Foucaultian <span id=heterotopia>heterotopias,</span> as places of Other but also mirrors of reality.<span id=bibTwo>2</span> These perceptions also exist as data, dematerialized and separated from their body. The third world, between physical and <span id=projection>projection,</span> is the focus of TOR.<br>
+    <br>A visible example of the Loop exists in traditional and historic <span id=orient>Orientalism.</span> European paintings of the Middle East are colonialist narratives and virtual cities. They are visible, mirrored versions of reality, warped by the mindset of the painters. The colonizers then return and reconstruct the city to match their perception of how it should be. Again in the early 20th century, American economic anxieties  were projected onto East Asian bodies. Chinatowns, once centers of industry for Chinese immigrants, began to market themselves as tourist destinations through adaptation of what Westerners viewed as “traditional Chinese” architecture.<span id=bibThree>3</span> Chinatowns became neighborhoods that existed simultaneously for immigrants and for the Western gaze of Tourists. The neighborhoods became an image made physical, flimsy as a film set.<br>
+    <br>In contemporary culture, there has been an emergence of techno-Orientalism.<span id=bibFour>4</span> In Western <span id=specFic>speculative science fiction</span> films, anxieties of a dystopian, tech-dominated future are projected onto Asian bodies. East Asian metropolises are used to depict future worlds, referencing stereotypical motifs and visual cues for the viewers to <span id=orientTwo>orient</span> themselves.<span id=bibFive>5</span> Through film, the Loop’s implications are shaped increasingly by technology advancements. Digital projections themselves continue to become ever more permanent. Narratives are played out in virtual worlds, but through reconsumption the viewer can create new perceptions as realities. At the physical city, citizens are also consuming and adapting their environment to match the glamourized movie-world. Like Chinatowns, they accept the perception for its usefulness in capital gain with less consideration of social value.<br>
+    <br>Tokyo is one of the most well-documented and temporal contemporary East Asian Cities. It has been imagined and reimagined as simultaneously high-tech and mysteriously ancient, most visibly in <span id=cyberpunk>cyberpunk</span> and science fiction. In narrative modes of <span id=representation>representation,</span> it has served as a backdrop and well for inspiration for American creators aiming for exotic. To analyze and explore the urban Feedback Loop, we began an investigation of the representations of post-war Tokyo, including narrative films, Orientalist imaginings, and <span id=cyborgian>cyborgian</span> futures. Conceptual framework is supplemented by studies of <span id=cybernetics>cybernetics</span> and <span id=postUrban>post-urbanism.</span><span id=bibSix>6</span> Through extremist replication of the Loop, with an awareness of power and the role of the audience and the creator who consumes these media, we aim to comment and generate conversation around the power perceptions of cities. Existing images, landmarks, and motifs are referenced in the production of self-aware dioramas to represent an extreme future, an ever-morphing digital reality of the <span id=bottom>city.</span></h2>
+    <div id=feedbackLoopDefinition>System where part or all of the output becomes the input, specifically with a flow of information.<br><br>System where a change in the system will trigger a certain event; can be positive, or increase the change, or negative, return to normal.</div>
+    <div id=bibOneSource>Hayles, N. Katherine. “Toward Embodied Virtuality.” In <span id=italics>How We Became Posthuman: Virtual Bodies in Cybernetics, Literature, and Informatics.</span> Chicago, Ill: University of Chicago Press, 1999.</div>
+    <div id=heterotopiaDefinition>Foucaultian theoretical space of Otherness, described as mirrors or worlds that contain worlds within.</div>
+    <div id=bibTwoSource>Foucault, Michel. “Des Espace Autres, Of Other Spaces: Utopias and Heterotopias.” Translated by Jay Miskowiec, 1967.</div>
+    <div id=projectionDefinition>A future speculation based on present conditions or research.<br><br>The presenting of media onto an intermediary surface.</div>
+    <div id=orientDefinition>A fictional place of Other existing because of the expectations of the Occident.<br><br>To shift view in relation to another factor.<br><br>In practice, Orientalism.</div>
+    <div id=bibThreeSource>Ng, Rachel. “Why Does the U.S. Have so Many Chinatowns?” <span id=italics>National Geographic,</span> July 2021.</div>
+    <div id=bibFourSource>Roh, David S., Betsy Huang, and Greta A. Niu. “Technologizing Orientalism.” In <span id=italics>Techno-Orientalism : Imagining Asia in Speculative Fiction, History, and Media,</span> 8th ed., 1–22. Asian American Studies Today. New Brunswick: Rutgers University Press, 2015.</div>
+    <div id=specFicDefinition>A narrative or falsity that allows the author to explore alternatives.</div>
+    <div id=bibFiveSource>Chun, Wendy. “Orienting Orientalism, or How to Map Cyberspace.” In <span id=italics>Asian America.Net: Ethnicity, Nationalism, and Cyberspace,</span> First., 72–131. New York: Routledge, 2003.<br><br>Foucault, Michel. “Des Espace Autres, Of Other Spaces: Utopias and Heterotopias.” Translated by Jay Miskowiec, 1967.</div>
+    <div id=cyberpunkDefinition>Subgenre of science fiction with a focus on a dystopian society dominated by advanced technologies.</div>
+    <div id=representationDefinition>The depiction of something, highlighting chosen characteristics.</div>
+    <div id=cyborgianDefinition>To be part organism and part machine.</div>
+    <div id=cyberneticsDefinition>The study of the communication between machines and organisms, including control systems and hybrid existences.</div>
+    <div id=postUrbanDefinition>“[When] a city is not what it is, but what it is made out to be.” (Chaplin, “Addressing the Post-Urban)</div>
+    <div id=bibSixSource>Chaplin, Sarah, and Eric Holding. “Addressing the Post-Urban.” In <span id=italics>The Hieroglyphics of Space,</span> First. Routledge, 2001.</div>
+    <img id=logo src="https://i.imgur.com/pgXeBAd.png"></img>
+    <a href="thesis_appendix.html"<div id=appendix>Further Reading</div></a>
+  </body>
+</html>
