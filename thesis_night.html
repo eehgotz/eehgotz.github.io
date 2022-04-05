@@ -1,41 +1,152 @@
 <html>
   <head>
-    <title>Tokyo-TR</title>
+    <title>Tokyo-N</title>
     <link rel="shortcut icon" href="https://i.imgur.com/pgXeBAd.png">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="thesis_night.js"></script>
     <style>
-      body {
-        background-color: #faebf4;
+      #back:link {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 50px;
+        top: 93vh;
+        left: 30px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
       }
-      h1 {
-        position: relative;
-        color: #422a70;
-        width: 900px;
-        left: 60px;
-        top: 50px;
+      #back:visited {
+        color: white;
+      }
+      #back:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #next:link {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 50px;
+        top: 93vh;
+        right: 90px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #next:visited {
+        color: white;
+      }
+      #next:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #help {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 50px;
+        top: 3vh;
+        left: 30px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #help:hover {
+        color: black;
+        background-color:#faebf4;
+        cursor: help;
+      }
+      #instructions {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 60vw;
+        top: 40vh;
+        left: 20vw;
         font-size: 30px;
         font-family: "Courier New";
-        letter-spacing: 5px;
-        text-align: left;
-        z-index: -1;
+        opacity: .8;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+        display: none;
       }
-      h2 {
-        position: relative;
+      #downloadGuides:link {
+        cursor: pointer;
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 150px;
+        bottom: 27vh;
+        left: 38vw;
+        font-size: 25px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+        display: none;
+      }
+      #downloadGuides:visited {
+        color: white;
+      }
+      #downloadGuides:hover {
         color: black;
-        width: 50vw;
-        left: 90px;
-        top: 10vh;
-        font-size: 20px;
-        font-family: "Helvetica";
-        text-align: justify;
+        background-color:#faebf4;
       }
-      #italics {
-        font-style:italic;
+      #downloadPopUp:link {
+        cursor: pointer;
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 150px;
+        top: 28vh;
+        right: 12vw;
+        font-size: 25px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+        display: none;
       }
-      #bottom {
-        padding-bottom: 25px;
+      #downloadPopUp:visited {
+        color: white;
+      }
+      #downloadPopUp:hover {
+        color: black;
+        background-color:#faebf4;
       }
     </style>
   </head>
   <body>
+    <a href="thesis_transit.html"<div id=back><</div></a>
+    <a href="thesis_goodbye.html"<div id=next>></div></a>
+    <div id=help>?</div>
+    <div id=instructions>How to Move:<br>Use the arrow keys to move your body.<br>Click and drag the screen to move your head.<br>Walk through the city until you've lost yourself.</div>
+    <a href="https://drive.google.com/file/d/1gRLPPf_TJOVdYF46CIIFLPsawV7iRnci/view?usp=sharing" target="_blank"<div id=downloadGuides>Guides</div></a>
+    <a href="https://drive.google.com/file/d/1IoufMrRjKfjTXDdgntDAlNFdmU_Ww2AZ/view?usp=sharing" target="_blank"<div id=downloadPopUp>Playlist</div></a>
+    <a-scene>
+      <a-entity position="0 2 -6" scale="3 3 3" rotation="0 25 0" geometry="primitive:box;" material="shader:gif;src:url(https://i.imgur.com/4xkbkNT.gif)"></a-entity>
+      <a-sky color="black"></a-sky>
+      <a-light type="ambient" color="#f2f2f2"></a-light>
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
   </body>
 </html>

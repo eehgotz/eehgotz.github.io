@@ -2,6 +2,11 @@
   <head>
     <title>Tokyo-TR</title>
     <link rel="shortcut icon" href="https://i.imgur.com/pgXeBAd.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="thesis_transit.js"></script>
+    <!--This project is for educational purposes ony. Certain materials are included under fair use exemption of the U.S. Copyright Law. They are restricted from further use. Plz don't sue me I have no money. These include clips from:
+    -->
     <style>
       body {
         background-color: #faebf4;
@@ -34,8 +39,172 @@
       #bottom {
         padding-bottom: 25px;
       }
+      #back:link {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 50px;
+        top: 93vh;
+        left: 30px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #back:visited {
+        color: white;
+      }
+      #back:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #next:link {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 50px;
+        top: 93vh;
+        right: 90px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #next:visited {
+        color: white;
+      }
+      #next:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #help {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 50px;
+        top: 3vh;
+        left: 30px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #help:hover {
+        color: black;
+        background-color:#faebf4;
+        cursor: help;
+      }
+      #instructions {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 60vw;
+        top: 40vh;
+        left: 20vw;
+        font-size: 30px;
+        font-family: "Courier New";
+        opacity: .8;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+        display: none;
+      }
+      #downloadGuides:link {
+        cursor: pointer;
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 150px;
+        top: 24vh;
+        left: 18vw;
+        font-size: 25px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+        display: none;
+      }
+      #downloadGuides:visited {
+        color: white;
+      }
+      #downloadGuides:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #downloadPopUp:link {
+        cursor: pointer;
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 150px;
+        top: 78vh;
+        right: 32vw;
+        font-size: 25px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+        display: none;
+      }
+      #downloadPopUp:visited {
+        color: white;
+      }
+      #downloadPopUp:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #shibuya {
+        position: absolute;
+        left: 5vw;
+        top: 5vh;
+        z-index: 1;
+      }
+      #train {
+        position: absolute;
+        left: 10vw;
+        top: 10vh;
+        display: none;
+        z-index: 2;
+      }
+      #car {
+        position: absolute;
+        left: 15vw;
+        top: 15vh;
+        width:1280;
+        display: none;
+        z-index: 3;
+      }
     </style>
   </head>
   <body>
+    <a href="thesis_towers.html"<div id=back><</div></a>
+    <a href="thesis_night.html"<div id=next>></div></a>
+    <div id=help>?</div>
+    <div id=instructions>Sit back, relax, and watch the show.</div>
+    <iframe id=shibuya
+    src="https://player.vimeo.com/video/695070615?h=71697c441a&autoplay=1&loop=1&title=0&byline=0"
+    width="1280" height="720"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+    <iframe id=train
+      src="https://player.vimeo.com/video/696158546?h=a6662d47f4&loop=1&title=0&byline=0"
+      width="1280" height="720"
+      frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+    <image id=car
+      src="https://i.imgur.com/ij6rdUK.png">
+    </image>
+    <a href="https://drive.google.com/file/d/1gRLPPf_TJOVdYF46CIIFLPsawV7iRnci/view?usp=sharing" target="_blank"<div id=downloadGuides>Guides</div></a>
+    <a href="https://drive.google.com/file/d/1sgn62W7m0LODcow8zmqrMHFvn7wJ5D4_/view?usp=sharing" target="_blank"<div id=downloadPopUp>Flip</div></a>
   </body>
 </html>
