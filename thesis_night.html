@@ -1,35 +1,14 @@
 <html>
   <head>
-    <title>Tokyo-N</title>
+    <title>Nightlife District</title>
     <link rel="shortcut icon" href="https://i.imgur.com/pgXeBAd.png">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
     <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-        <script src="thesis_night.js"></script>
+        <script src="thesis_night.js"></script>-->
     <style>
-      #back:link {
-        position: fixed;
-        color: white;
-        background-color:#d14e9c;
-        width: 50px;
-        top: 93vh;
-        left: 30px;
-        font-size: 20px;
-        font-family: "Courier New";
-        opacity: .6;
-        text-align: center;
-        text-decoration: none;
-        z-index: 10;
-      }
-      #back:visited {
-        color: white;
-      }
-      #back:hover {
-        color: black;
-        background-color:#faebf4;
-      }
       #next:link {
         position: fixed;
         color: white;
@@ -85,67 +64,279 @@
         z-index: 10;
         display: none;
       }
-      #downloadGuides:link {
-        cursor: pointer;
+      #spotify {
         position: fixed;
-        color: white;
-        background-color:#d14e9c;
-        width: 150px;
-        bottom: 27vh;
-        left: 38vw;
-        font-size: 25px;
-        font-family: "Courier New";
-        opacity: .6;
-        text-align: center;
-        text-decoration: none;
-        z-index: 10;
-        display: none;
+        top: 3vh;
+        right: 30px;
+        z-index: 20;
       }
-      #downloadGuides:visited {
-        color: white;
+      #pop1{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 83vh;
+       right: 55vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
       }
-      #downloadGuides:hover {
-        color: black;
-        background-color:#faebf4;
+      #pop2{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 36vh;
+       left: 16vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
       }
-      #downloadPopUp:link {
-        cursor: pointer;
-        position: fixed;
-        color: white;
-        background-color:#d14e9c;
-        width: 150px;
-        top: 28vh;
-        right: 12vw;
-        font-size: 25px;
-        font-family: "Courier New";
-        opacity: .6;
-        text-align: center;
-        text-decoration: none;
-        z-index: 10;
-        display: none;
+      #pop3{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 39vh;
+       right: 19vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
       }
-      #downloadPopUp:visited {
-        color: white;
+      #pop4{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 77vh;
+       left: 60vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
       }
-      #downloadPopUp:hover {
-        color: black;
-        background-color:#faebf4;
+      #pop5{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 15vh;
+       left: 29vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop6{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 30vh;
+       left: 30vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop7{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 60vh;
+       left: 30vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
       }
     </style>
   </head>
   <body>
-    <a href="thesis_transit.html"<div id=back><</div></a>
-    <a href="thesis_goodbye.html"<div id=next>></div></a>
+    <!--<a href="thesis_transit.html"<div id=back><</div></a>-->
+    <a href="thesis_towers.html"<div id=next>></div></a>
     <div id=help>?</div>
     <div id=instructions>How to Move:<br>Use the arrow keys to move your body.<br>Click and drag the screen to move your head.<br>Walk through the city until you've lost yourself.</div>
-    <a href="https://drive.google.com/file/d/1gRLPPf_TJOVdYF46CIIFLPsawV7iRnci/view?usp=sharing" target="_blank"<div id=downloadGuides>Guides</div></a>
-    <a href="https://drive.google.com/file/d/1IoufMrRjKfjTXDdgntDAlNFdmU_Ww2AZ/view?usp=sharing" target="_blank"<div id=downloadPopUp>Playlist</div></a>
+    <div id="pop1">As you look into glowing signs of the city, how do you feel?</div>
+    <div id="pop2">Do they inspire wonder, anonymity, fear?</div>
+    <div id="pop3">Are the signs orienting you to your dreams?</div>
+    <div id="pop4">Do you wish they would?</div>
+    <div id="pop5">Have you ever thought about who the lights are for?</div>
+    <div id="pop6">Every step you take is farther from the edge of the known.</div>
+    <div id="pop7">The night life is full of digital lives, but when you are gone do they continue to flash?</div>
+    <iframe id=spotify
+      src="https://open.spotify.com/embed/playlist/3JSg4C4lprvLhjcWJByAtl?utm_source=generator&theme=0"
+      width="50%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
     <a-scene>
-      <a-entity position="0 2 -6" scale="3 3 3" rotation="0 25 0" geometry="primitive:box;" material="shader:gif;src:url(https://i.imgur.com/4xkbkNT.gif)"></a-entity>
+      <a-entity id="luckyCat"
+        position="5 2 -2" scale="3 3 3" rotation="0 25 0"
+        geometry="primitive:box;"
+        material="shader:gif;src:url(https://i.imgur.com/4xkbkNT.gif)">
+      </a-entity>
+      <a-entity id="gate"
+        position="0 5 -20" scale="10 10 10"
+        geometry="primitive:box;"
+        material="shader:gif;src:url(https://i.imgur.com/Pn8lKZx.gif)">
+      </a-entity>
+      <a-image id="iHeartKabukicho"
+        src="https://i.imgur.com/QOL9gdX.png"
+        position="8 6 -8" rotation="0 -30 0"
+        width="5" height="5">
+      </a-image>
+      <a-image id="cheersSign"
+        src="https://i.imgur.com/NF6YsJb.png"
+        position="-8 5 -10" rotation="0 30 0"
+        width="3" height="3"
+        material.opacity="1"
+        animation__mouseenter="property: material.opacity; to: 0; startEvents: mouseenter; dur: 500";
+        animation__mouseleave="property: material.opacity; to: 1; startEvents: mouseleave; dur: 500";>
+      </a-image>
+      <a-image id="girlKimono"
+        src="https://i.imgur.com/xpHXUXR.png"
+        position="-10 5 4" rotation="0 90 0"
+        width="5" height="5">
+      </a-image>
+      <a-image id="clouds"
+        src="https://i.imgur.com/OWsS2Zu.png"
+        position="-10 8 -7" rotation="0 60 0"
+        animation="property: position; to: -10 7 -3; dur: 2000; easing: linear; loop: true"
+        width="5" height="5">
+      </a-image>
+      <a-image id="girlBack"
+        src="https://i.imgur.com/zFAxvwv.png"
+        position="-1 5 7" rotation="0 60 0"
+        width="5" height="5"
+        material.opacity="1"
+        animation__mouseenter="property: material.opacity; to: 0; startEvents: mouseenter; dur: 500";
+        animation__mouseleave="property: material.opacity; to: 1; startEvents: mouseleave; dur: 500";>
+      </a-image>
+      <a-image id="barSign"
+        src="https://i.imgur.com/LEvMrly.png"
+        position="10 2 4" rotation="0 90 0"
+        width="3" height="3">
+      </a-image>
+      <a-image id="flowers"
+        src="https://i.imgur.com/3ABSn9Z.png"
+        position="3 4 4" rotation="0 0 0"
+        animation="property: rotation; to: 0 0 360; dur: 5000; easing: linear; loop: true"
+        width="3" height="3">
+      </a-image>
+      <a-image id="karaokeSign"
+        src="https://i.imgur.com/ThSTJda.png"
+        position="-4 5 2" rotation="0 180 0"
+        width="5" height="5">
+      </a-image>
+      <a-image id="snakePit"
+        src="https://i.imgur.com/0rPTqtQ.png"
+        position="-7 3 8" rotation="0 120 0"
+        width="6" height="6">
+      </a-image>
+      <a-image id="chicken"
+        src="https://i.imgur.com/SDGTt3E.png"
+        position="15 8 8" rotation="0 -60 0"
+        width="4" height="4">
+      </a-image>
+      <a-image id="eyeSign"
+        src="https://i.imgur.com/lDmLQSL.png"
+        position="-18 10 -15" rotation="0 60 0"
+        width="4" height="4">
+      </a-image>
+      <a-image id="swirly"
+        src="https://i.imgur.com/ZzcNjoz.png"
+        position="0 -2 -3" rotation="-30 30 0"
+        width="6" height="6">
+      </a-image>
+      <a-entity id="sushi"
+        position="1 5 20" scale="6 6 6"
+        geometry="primitive:box;"
+        material="shader:gif;src:url(https://i.imgur.com/tjXL74o.gif)">
+      </a-entity>
+      <a-image id="notARecycledDrawing"
+        src="https://i.imgur.com/w19gbcu.png"
+        position="12 5 8" rotation="0 120 0"
+        width="5" height="5"
+        material.opacity="1"
+        animation__mouseenter="property: material.opacity; to: 0; startEvents: mouseenter; dur: 500";
+        animation__mouseleave="property: material.opacity; to: 1; startEvents: mouseleave; dur: 500";>
+      </a-image>
+      <a-image id="orangeLantern"
+        src="https://i.imgur.com/U2NI3PH.png"
+        position="-15 6 -1" rotation="0 120 0"
+        animation="property: position; to: -15 5.8 -1; dir: alternate; dur: 1000; easing: linear; loop: true"
+        width="1" height="1">
+      </a-image>
+      <a-image id="redLantern"
+        src="https://i.imgur.com/l9rv1lK.png"
+        position="-16 5 1" rotation="0 120 0"
+        animation="property: position; to: -16 5.2 1; dir: alternate; dur: 1000; easing: linear; loop: true"
+        width="1.5" height="1.5">
+      </a-image>
+      <a-image id="textYakuza"
+        src="https://i.imgur.com/O8dGDz5.png"
+        position="17 3 2" rotation="0 -90 0"
+        width="2" height="2">
+      </a-image>
+      <a-image id="textGeisha"
+        src="https://i.imgur.com/goTLtlY.png"
+        position="-5 4 23" rotation="0 180 0"
+        width="2" height="2">
+      </a-image>
+      <a-image id="textSamurai"
+        src="https://i.imgur.com/uoLYIo2.png"
+        position="-19 3.5 -1" rotation="0 90 0"
+        width="2" height="2">
+      </a-image>
       <a-sky color="black"></a-sky>
       <a-light type="ambient" color="#f2f2f2"></a-light>
       <a-camera>
-        <a-cursor></a-cursor>
+        <a-cursor color="white"></a-cursor>
       </a-camera>
     </a-scene>
   </body>

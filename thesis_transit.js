@@ -10,83 +10,61 @@ $(document).ready(function() {
      }
   );
 
-  function showGuides() {
-    $("#downloadGuides").show();
+  function showStation() {
+    $("#subwayStation").show();
     }
-  setTimeout(showGuides, 8000);
-
-  function download() {
-    $("#downloadPopUp").show();
-    }
-  setTimeout(download, 16000);
+  setTimeout(showStation, 60000);
 
   function showTrain() {
     $("#train").show();
+    $("#subwaySounds").show();
     }
-  setTimeout(showTrain, 60000);
+  setTimeout(showTrain, 65000);
 
   function showCar() {
     $("#car").show();
     }
-  setTimeout(showCar, 120000);
+  setTimeout(showCar, 125000);
 
-  $("#pop1x").click(
-    function(){
-      $("#pop1").hide();
-      $("#pop1x").hide();
+  function showNextWorld() {
+    $("#nextWorld").show();
     }
-  )
+  setTimeout(showNextWorld, 185000);
+
+  function popUp1() {
+    $("#pop1").show();
+    $("#pop1x").show();
+    }
+  setTimeout(popUp1, 32000);
 
   function popUp2() {
     $("#pop2").show();
     $("#pop2x").show();
     }
-  setTimeout(popUp2, 88000);
-
-  $("#pop2x").click(
-    function(){
-      $("#pop2").hide();
-      $("#pop2x").hide();
-    }
-  )
+  setTimeout(popUp2, 72000);
 
   function popUp3() {
     $("#pop3").show();
     $("#pop3x").show();
     }
-  setTimeout(popUp3, 93000);
-
-  $("#pop3x").click(
-    function(){
-      $("#pop3").hide();
-      $("#pop3x").hide();
-    }
-  )
+  setTimeout(popUp3, 112000);
 
   function popUp4() {
     $("#pop4").show();
     $("#pop4x").show();
     }
-  setTimeout(popUp4, 98000);
-
-  $("#pop4x").click(
-    function(){
-      $("#pop4").hide();
-      $("#pop4x").hide();
-    }
-  )
+  setTimeout(popUp4, 142000);
 
   function popUp5() {
     $("#pop5").show();
     $("#pop5x").show();
     }
-  setTimeout(popUp5, 103000);
+  setTimeout(popUp5, 162000);
 
-  $("#pop5x").click(
-    function(){
-      $("#pop5").hide();
-      $("#pop5x").hide();
+  function popUp6() {
+    $("#pop6").show();
+    $("#pop6x").show();
     }
-  )
+  setTimeout(popUp6, 167000);
 
 })

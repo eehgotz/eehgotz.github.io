@@ -1,12 +1,11 @@
 <html>
   <head>
-    <title>Tokyo-TR</title>
+    <title>Transit District</title>
     <link rel="shortcut icon" href="https://i.imgur.com/pgXeBAd.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script src="thesis_transit.js"></script>
-    <!--This project is for educational purposes ony. Certain materials are included under fair use exemption of the U.S. Copyright Law. They are restricted from further use. Plz don't sue me I have no money. These include clips from:
-    -->
+    <!--This project is for educational purposes ony. Certain materials are included under fair use exemption of the U.S. Copyright Law. They are restricted from further use. Plz don't sue me I have no money. These include clips from: Anderson, Paul W. S. Resident Evil: Afterlife. 2010. Coppola, Sofia. Lost in Translation. Focus Features, Tohokushinsha Film Corporation, 2003. Fuller, Samuel. House of Bamboo. 20th Century Studies, 1955. Lin, Justin. The Fast and The Furious: Tokyo Drift. Universal Studios, 2006. Mangold, James. The Wolverine. 20th Century Studios, 2013. Miyazaki, Hayao. Spirited Away. Studio Ghibli, 2001. Nicolas-Troyan, Cedric. Kate. Netflix, 2021. Otomo, Katsuhiro. Akira. Toho Co., Ltd., 1988. Ozu, Yasujiro. Tokyo Story. Shochiku, 1953. Park, Sunghoo. Jujutsu Kaisen. Crunchyroll, 2020. Sato, Junichi. Sailor Moon. TV Asahi, 1992. Scott, Ridley. Blade Runner. Warner Bros. Pictures, 1982. Shinkai, Makoto. Your Name. Toho Co., Ltd., 2017. Shinsuke, Sato. Alice in Borderland. Netflix, 2020. Sotozaki, Haruo. Demon Slayer: Kimetsu no Yaiba, 2020. Tarantino, Quentin. Kill Bill: Volume 1. Miramax, 2003. -->
     <style>
       body {
         background-color: #faebf4;
@@ -66,7 +65,7 @@
         background-color:#d14e9c;
         width: 50px;
         top: 93vh;
-        right: 90px;
+        right: 30px;
         font-size: 20px;
         font-family: "Courier New";
         opacity: .6;
@@ -115,96 +114,290 @@
         z-index: 10;
         display: none;
       }
-      #downloadGuides:link {
-        cursor: pointer;
-        position: fixed;
-        color: white;
-        background-color:#d14e9c;
-        width: 150px;
-        top: 24vh;
-        left: 18vw;
-        font-size: 25px;
-        font-family: "Courier New";
-        opacity: .6;
-        text-align: center;
-        text-decoration: none;
-        z-index: 10;
-        display: none;
+      #pop1{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 75vh;
+       left: 55vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
       }
-      #downloadGuides:visited {
-        color: white;
+      #pop2{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 80vh;
+       left: 7vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
       }
-      #downloadGuides:hover {
-        color: black;
-        background-color:#faebf4;
+      #pop3{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 4vh;
+       right: 8vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
       }
-      #downloadPopUp:link {
-        cursor: pointer;
-        position: fixed;
-        color: white;
-        background-color:#d14e9c;
-        width: 150px;
-        top: 78vh;
-        right: 32vw;
-        font-size: 25px;
-        font-family: "Courier New";
-        opacity: .6;
-        text-align: center;
-        text-decoration: none;
-        z-index: 10;
-        display: none;
+      #pop4{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 17vh;
+       left: 16vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
       }
-      #downloadPopUp:visited {
-        color: white;
+      #pop5{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 30vh;
+       left: 30vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
       }
-      #downloadPopUp:hover {
-        color: black;
-        background-color:#faebf4;
+      #pop6{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 60vh;
+       left: 30vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
       }
       #shibuya {
         position: absolute;
-        left: 5vw;
-        top: 5vh;
+        left: 4vw;
+        top: 10px;
         z-index: 1;
+      }
+      #subwayStation {
+        position: absolute;
+        left: 4vw;
+        top: 730px;
+        height: 720px;
+        display: none;
+        z-index: 2;
       }
       #train {
         position: absolute;
-        left: 10vw;
-        top: 10vh;
+        left: 1480;
+        top: 1450px;
+        display: none;
+        z-index: 3;
+      }
+      #subwaySounds {
+        position: fixed;
+        right: 30px;
+        top: 3vh;
         display: none;
         z-index: 2;
       }
       #car {
         position: absolute;
-        left: 15vw;
-        top: 15vh;
-        width:1280;
+        left: 4vw;
+        top: 2170px;
         display: none;
-        z-index: 3;
+        z-index: 4;
+      }
+      #nextWorld:link {
+        cursor: pointer;
+        position: absolute;
+        color: white;
+        background-color:#d14e9c;
+        width: 150px;
+        top: 2890px;
+        left: 30px;
+        font-size: 25px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+        display: none;
+      }
+      #nextWorld:visited {
+        color: white;
+      }
+      #nextWorld:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #trainSticker1 {
+        position: fixed;
+        left:100vw;
+        top: 23vh;
+        width:31vw;
+        animation-name: positionL;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        z-index: 5;
+      }
+      #trainSticker2 {
+        position: fixed;
+        left:100vw;
+        top: 63vh;
+        width:34vw;
+        animation-name: positionL;
+        animation-duration: 7s;
+        animation-delay: 45s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        z-index: 5;
+      }
+      #carSticker1 {
+        position: fixed;
+        left:100vw;
+        top: 79vh;
+        width:15vw;
+        animation-name: positionL;
+        animation-duration: 6s;
+        animation-delay: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        z-index: 5;
+      }
+      #carSticker2 {
+        position: fixed;
+        left:100vw;
+        top: 59vh;
+        width:13vw;
+        animation-name: positionL;
+        animation-duration: 6s;
+        animation-delay: 72s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        z-index: 5;
+      }
+      @keyframes positionL {
+        from {left:100vw;}
+        to {left:-50vw;}
+      }
+      #bikeSticker1 {
+        position: fixed;
+        right:100vw;
+        top: 58vh;
+        width:15vw;
+        animation-name: positionR;
+        animation-duration: 5s;
+        animation-delay: 16s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        z-index: 5;
+      }
+      #bikeSticker2 {
+        position: fixed;
+        right:100vw;
+        top: 17vh;
+        width:11vw;
+        animation-name: positionR;
+        animation-duration: 4s;
+        animation-delay: 60s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        z-index: 5;
+      }
+      @keyframes positionR {
+        from {right:100vw;}
+        to {right:-50vw;}
       }
     </style>
   </head>
   <body>
-    <a href="thesis_towers.html"<div id=back><</div></a>
+    <!--<a href="thesis_towers.html"<div id=back><</div></a>-->
     <a href="thesis_night.html"<div id=next>></div></a>
     <div id=help>?</div>
-    <div id=instructions>Sit back, relax, and watch the show.</div>
+    <div id=instructions>Sit back, relax, and enjoy the show.</div>
+    <div id="pop1">As we move around the city, on foot, car, or train, do our perceptions change?</div>
+    <div id="pop2">What is associated with each mode of transit?</div>
+    <div id="pop3">Why do films and shows choose the one they do and as you’re watching, do you feel the motion?</div>
+    <div id="pop4">Do the associations change through time?</div>
+    <div id="pop5">The transitory state of motion, from point a to point b, night to day, as a technique can show progress or modernization, crossing a threshold, or both.</div>
+    <div id="pop6">The city becomes an active racetrack, an obstacle course to be explored and conquered.</div>
     <iframe id=shibuya
-    src="https://player.vimeo.com/video/695070615?h=71697c441a&autoplay=1&loop=1&title=0&byline=0"
+    src="https://player.vimeo.com/video/702597406?h=71697c441a&autoplay=1&loop=1&title=0&byline=0"
     width="1280" height="720"
     frameborder="0"
     allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
     </iframe>
+    <img id="subwayStation" src="https://i.imgur.com/BAxltc7.png"></image>
+    <iframe id=subwaySounds
+      width="280" height="158" src="https://www.youtube.com/embed/470_2wt2t1o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
     <iframe id=train
-      src="https://player.vimeo.com/video/696158546?h=a6662d47f4&loop=1&title=0&byline=0"
-      width="1280" height="720"
-      frameborder="0"
+      src="https://player.vimeo.com/video/698686932?h=0eb2401925&autoplay=1&loop=1&title=0&byline=0"
+      width="1280" height="720" frameborder="0"
       allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
     </iframe>
-    <image id=car
-      src="https://i.imgur.com/ij6rdUK.png">
-    </image>
-    <a href="https://drive.google.com/file/d/1gRLPPf_TJOVdYF46CIIFLPsawV7iRnci/view?usp=sharing" target="_blank"<div id=downloadGuides>Guides</div></a>
-    <a href="https://drive.google.com/file/d/1sgn62W7m0LODcow8zmqrMHFvn7wJ5D4_/view?usp=sharing" target="_blank"<div id=downloadPopUp>Flip</div></a>
+    <iframe id=car
+      src="https://player.vimeo.com/video/699773618?h=a8074f1f38&autoplay=1&loop=1&title=0&byline=0"
+      width="1280" height="720" frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+    <image id=trainSticker1 src="https://i.imgur.com/90jam6W.png">
+    <image id=carSticker1 src="https://i.imgur.com/OHI2PK7.png">
+    <image id=bikeSticker1 src="https://i.imgur.com/Bk0FU2D.png">
+    <image id=trainSticker2 src="https://i.imgur.com/90jam6W.png">
+    <image id=carSticker2 src="https://i.imgur.com/OHI2PK7.png">
+    <image id=bikeSticker2 src="https://i.imgur.com/Bk0FU2D.png">
+    <a href="thesis_night.html"<div id=nextWorld>Nightlife</div></a>
   </body>
 </html>

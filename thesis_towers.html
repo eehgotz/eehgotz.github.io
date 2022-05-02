@@ -1,11 +1,11 @@
 <!DOCTYPE html>
   <head>
-    <title>Tokyo-T</title>
+    <title>Tower District</title>
     <link rel="shortcut icon" href="https://i.imgur.com/pgXeBAd.png">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-        <script src="thesis_towers_help.js"></script>
+        <script src="thesis_towers.js"></script>
     <style>
       #intro {
         position: fixed;
@@ -22,20 +22,6 @@
         cursor:pointer;
         z-index: 10;
       }
-        #back:link {
-          position: fixed;
-          color: white;
-          background-color:#d14e9c;
-          width: 50px;
-          top: 93vh;
-          left: 30px;
-          font-size: 20px;
-          font-family: "Courier New";
-          opacity: .6;
-          text-align: center;
-          text-decoration: none;
-          z-index: 10;
-        }
         #back:visited {
           color: white;
         }
@@ -437,7 +423,6 @@
   <body>
     <!-- menu -->
     <div id=intro>Use the arrow keys to move your body.<br>Click and drag the screen to move your head.<br><br>Click to enter.</div>
-    <a href="thesis_intro.html"<div id=back><</div></a>
     <a href="thesis_transit.html"<div id=next>></div></a>
     <div id=help>?</div>
     <a class="btn" id="sound1">sound 1</a>
@@ -447,12 +432,11 @@
     <audio id="sound2A" src="https://cdn.glitch.global/d3420555-5c1a-4310-93d4-0db0fbbcc0a9/mixkit-urban-ambient-sound-2465.wav?v=1647894556373" preload="auto"></audio>
     <audio id="sound3A" src="https://cdn.glitch.global/d3420555-5c1a-4310-93d4-0db0fbbcc0a9/mixkit-future-city-urban-ambience-2926.wav?v=1647894560719" preload="auto"></audio>
     <div id=instructions>How to Move:<br>Use the arrow keys to move your body.<br>Click and drag the screen to move your head.<br>Walk through the city to Shibuya Crossing.</div>
-    <a href="https://drive.google.com/file/d/1gRLPPf_TJOVdYF46CIIFLPsawV7iRnci/view?usp=sharing" target="_blank"<div id=downloadGuides>Guides</div></a>
     <iframe id=upwards
-    src="https://player.vimeo.com/video/689028492?h=c338442fad&autoplay=1&loop=1&title=0&byline=0"
-    width="320" height="180"
-    frameborder="0"
-    allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+      src="https://player.vimeo.com/video/689028492?h=c338442fad&autoplay=1&loop=1&title=0&byline=0"
+      width="320" height="180"
+      frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
     </iframe>
     <iframe id=elevation
       src="https://player.vimeo.com/video/689305524?h=4982d9206b&autoplay=1&loop=1&title=0&byline=0"
@@ -465,17 +449,11 @@
       width="320" height="180"
       frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
     </iframe>
-    <a href="https://drive.google.com/file/d/1hK1jcPrIXfBo-n2CPOCe86Ap292zSzWa/view?usp=sharing" target="_blank"<div id=downloadPopUp>Postcard</div></a>
     <div id="pop1">What do you think of when we say future?</div>
-    <div id="pop1x">X</div>
     <div id="pop2">Is it flying cars and fembots?</div>
-    <div id="pop2x">X</div>
     <div id="pop3">High-tech cities built by Asian work-ethic?</div>
-    <div id="pop3x">X</div>
     <div id="pop4">Glass skyscrapers filled with office workers, clicking away on mechanical keyboards?</div>
-    <div id="pop4x">X</div>
-    <div id="pop5">Media projects societal anxieties, without regard for implications of these Other cities and people.</div>
-    <div id="pop5x">X</div>
+    <div id="pop5">Media projects societal anxieties of loss of power, without regard for implications of these Other cities and people.</div>
     <a-scene>
       <a-plane
         src="https://i.imgur.com/oUBeoof.png"
@@ -565,7 +543,7 @@
       </a-image>
       <a-image id="skytree"
         src="https://i.imgur.com/atTza3P.png"
-        position="40 22.5 -5.5"
+        position="51 22.5 3"
         rotation="0 90 0"
         width="35" height="45">
       </a-image>
@@ -597,22 +575,156 @@
         roughness="0">
       </a-image>
       <a-image id="skySouthStreet1"
-        src="https://i.imgur.com/9jE3s7m.png"
-        position="13 7.5 -4"
+        src="https://i.imgur.com/3A1Z4gg.png"
+        position="8 7.5 -4"
+        width="10" height="15"
+        rotation="0 180 0"
+        shader="standard"
+        metalness=".25"
+        roughness="0">
+      </a-image>
+      <a-image id="skyEastStreet1"
+        src="https://i.imgur.com/3A1Z4gg.png"
+        position="49 7.5 -5"
+        width="10" height="15"
+        rotation="0 90 0"
+        shader="standard"
+        metalness=".25"
+        roughness="0">
+      </a-image>
+      <a-image id="skyEastStreet2"
+        src="https://i.imgur.com/FIaWwAO.png"
+        position="49 7.5 12"
         width="20" height="15"
-        rotation="0 0 0"
+        rotation="0 90 0"
+        shader="standard"
+        metalness=".25"
+        roughness="0">
+      </a-image>
+      <a-image id="skyWestStreet1"
+        src="https://i.imgur.com/FIaWwAO.png"
+        position="39 7.5 6"
+        width="20" height="15"
+        rotation="0 -90 0"
+        shader="standard"
+        metalness=".25"
+        roughness="0">
+      </a-image>
+      <a-image id="towerSign"
+        src="https://i.imgur.com/garxJAA.png"
+        position="2 4 -4"
+        width="2" height="2">
+      </a-image>
+      <a-image id="coccoon"
+        src="https://i.imgur.com/MvS47sX.png"
+        position="16 12.5 30"
+        width="28" height="25"
+        rotation="0 180 0">
+      </a-image>
+      <a-image id="coccoonWestStreet1"
+        src="https://i.imgur.com/9jE3s7m.png"
+        position="13 7.5 6"
+        width="20" height="15"
+        rotation="0 90 0"
+        shader="standard"
+        metalness=".25"
+        roughness="0">
+      </a-image>
+      <a-image id="coccoonWestStreet2"
+        src="https://i.imgur.com/3A1Z4gg.png"
+        position="13 7.5 21"
+        width="10" height="15"
+        rotation="0 -90 0"
+        shader="standard"
+        metalness=".25"
+        roughness="0">
+      </a-image>
+      <a-image id="coccoonEastStreet1"
+        src="https://i.imgur.com/FIaWwAO.png"
+        position="19 7.5 6"
+        width="20" height="15"
+        rotation="0 90 0"
         shader="standard"
         metalness=".25"
         roughness="0">
       </a-image>
       <a-image id="skySouthStreet2"
         src="https://i.imgur.com/9jE3s7m.png"
-        position="33 7.5 -4"
+        position="29 7.5 -4"
         width="20" height="15"
         rotation="0 0 0"
         shader="standard"
         metalness=".25"
         roughness="0">
+      </a-image>
+      <a-image id="coccoonNorthStreet1"
+        src="https://i.imgur.com/9jE3s7m.png"
+        position="29 7.5 16"
+        width="20" height="15"
+        rotation="0 180 0"
+        shader="standard"
+        metalness=".25"
+        roughness="0">
+      </a-image>
+      <a-image id="coccoonSouthStreet1"
+        src="https://i.imgur.com/9jE3s7m.png"
+        position="29 7.5 22"
+        width="20" height="15"
+        rotation="0 0 0"
+        shader="standard"
+        metalness=".25"
+        roughness="0">
+      </a-image>
+      <a-image id="coccoonSouthStreet2"
+        src="https://i.imgur.com/3A1Z4gg.png"
+        position="44 7.5 22"
+        width="10" height="15"
+        rotation="0 -180 0"
+        shader="standard"
+        metalness=".25"
+        roughness="0">
+      </a-image>
+      <a-image id="coccoonSign"
+        src="https://i.imgur.com/G3FwREy.png"
+        position="18 6 17"
+        width="2" height="4"
+        rotation="0 180 0">
+      </a-image>
+      <a-image id="skyEastCherry1"
+        src="https://i.imgur.com/o0cCTzn.png"
+        position="47 3.5 -7"
+        width="7" height="7"
+        rotation="0 90 0">
+      </a-image>
+      <a-image id="skyEastCherry2"
+        src="https://i.imgur.com/o0cCTzn.png"
+        position="47 3.5 0"
+        width="7" height="7"
+        rotation="0 90 0">
+      </a-image>
+      <a-image id="skyEastCherry3"
+        src="https://i.imgur.com/o0cCTzn.png"
+        position="47 3.5 7"
+        width="7" height="7"
+        rotation="0 90 0">
+      </a-image>
+      <a-image id="skyEastCherry4"
+        src="https://i.imgur.com/o0cCTzn.png"
+        position="47 3.5 14"
+        width="7" height="7"
+        rotation="0 90 0">
+      </a-image>
+      <a-image id="skyWestCherry1"
+        src="https://i.imgur.com/o0cCTzn.png"
+        position="41 3.5 2"
+        width="7" height="7"
+        rotation="0 90 0">
+      </a-image>
+      <a-image id="skyWestCherry2"
+        src="https://i.imgur.com/o0cCTzn.png"
+        position="41 3.5 9"
+        width="7" height="7"
+        rotation="0 90 0">
       </a-image>
       <a-image id="nakaginCapsule"
         src="https://i.imgur.com/OmgPZT6.png"
@@ -656,6 +768,30 @@
         metalness=".25"
         roughness="0">
       </a-image>
+      <a-image id="nakaWestPower1"
+        src="https://i.imgur.com/Aq8TF0r.png"
+        position="13.5 5 23"
+        width="20" height="10"
+        rotation="0 90 0">
+      </a-image>
+      <a-image id="nakaWestPower2"
+        src="https://i.imgur.com/Aq8TF0r.png"
+        position="13.5 5 3"
+        width="20" height="10"
+        rotation="0 90 0">
+      </a-image>
+      <a-image id="nakaWestPower3"
+        src="https://i.imgur.com/Aq8TF0r.png"
+        position="13.5 5 -17"
+        width="20" height="10"
+        rotation="0 90 0">
+      </a-image>
+      <a-image id="nakaWestPower4"
+        src="https://i.imgur.com/Aq8TF0r.png"
+        position="13.5 5 -37"
+        width="20" height="10"
+        rotation="0 90 0">
+      </a-image>
       <a-image id="mori"
         src="https://i.imgur.com/B1GBT1C.png"
         position="60 12.5 -33"
@@ -698,6 +834,42 @@
         metalness=".25"
         roughness="0">
       </a-image>
+      <a-image id="lanternRed1"
+        src="https://i.imgur.com/6CSz33o.png"
+        position="43 4.8 -30.5"
+        width="2" height="2"
+        rotation="0 90 0">
+      </a-image>
+      <a-image id="lanternOrange1"
+        src="https://i.imgur.com/qXZp9bn.png"
+        position="41 5 -30.5"
+        width="2" height="2"
+        rotation="0 90 0">
+      </a-image>
+      <a-image id="lanternRed2"
+        src="https://i.imgur.com/6CSz33o.png"
+        position="39 4.8 -30.5"
+        width="2" height="2"
+        rotation="0 90 0">
+      </a-image>
+      <a-image id="lanternOrange2"
+        src="https://i.imgur.com/qXZp9bn.png"
+        position="37 5 -30.5"
+        width="2" height="2"
+        rotation="0 90 0">
+      </a-image>
+      <a-image id="lanternRed3"
+        src="https://i.imgur.com/6CSz33o.png"
+        position="35 4.8 -30.5"
+        width="2" height="2"
+        rotation="0 90 0">
+      </a-image>
+      <a-image id="lanternOrange3"
+        src="https://i.imgur.com/qXZp9bn.png"
+        position="33 5 -30.5"
+        width="2" height="2"
+        rotation="0 90 0">
+      </a-image>
       <a-image id="shibuya"
         src="https://i.imgur.com/Ucsag7a.png"
         position="32 12.5 -60"
@@ -720,6 +892,12 @@
         shader="standard"
         metalness=".25"
         roughness="0">
+      </a-image>
+      <a-image id="shibuyaSign"
+        src="https://i.imgur.com/L6dPo93.png"
+        position="34 4 -35"
+        width="2" height="2"
+        rotation="0 -90 0">
       </a-image>
       <a-link href="thesis_transit.html"
           <a-entity

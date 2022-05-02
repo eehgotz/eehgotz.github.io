@@ -9,95 +9,41 @@ $(document).ready(function() {
       $("#instructions").hide();
      }
   );
-  
-  function showGuides() {
-    $("#downloadGuides").show();
-    }
-  setTimeout(showGuides, 8000);
 
-  function download() {
-    $("#downloadPopUp").show();
-    }
-  setTimeout(download, 16000);
-
-  function showUp() {
-    $("#upwards").show();
-    }
-  setTimeout(showUp, 40000);
-
-  function showOut() {
-    $("#elevation").show();
-    }
-  setTimeout(showOut, 55000);
-
-  function showAir() {
-    $("#aerial").show();
-    }
-  setTimeout(showAir, 70000);
 
   function popUp1() {
     $("#pop1").show();
-    $("#pop1x").show();
     }
-  setTimeout(popUp1, 83000);
-
-  $("#pop1x").click(
-    function(){
-      $("#pop1").hide();
-      $("#pop1x").hide();
-    }
-  )
+  setTimeout(popUp1, 12000);
 
   function popUp2() {
     $("#pop2").show();
-    $("#pop2x").show();
     }
-  setTimeout(popUp2, 88000);
-
-  $("#pop2x").click(
-    function(){
-      $("#pop2").hide();
-      $("#pop2x").hide();
-    }
-  )
+  setTimeout(popUp2, 18000);
 
   function popUp3() {
     $("#pop3").show();
-    $("#pop3x").show();
     }
-  setTimeout(popUp3, 93000);
-
-  $("#pop3x").click(
-    function(){
-      $("#pop3").hide();
-      $("#pop3x").hide();
-    }
-  )
+  setTimeout(popUp3, 23000);
 
   function popUp4() {
     $("#pop4").show();
-    $("#pop4x").show();
     }
-  setTimeout(popUp4, 98000);
-
-  $("#pop4x").click(
-    function(){
-      $("#pop4").hide();
-      $("#pop4x").hide();
-    }
-  )
+  setTimeout(popUp4, 28000);
 
   function popUp5() {
     $("#pop5").show();
-    $("#pop5x").show();
     }
-  setTimeout(popUp5, 103000);
+  setTimeout(popUp5, 33000);
 
-  $("#pop5x").click(
-    function(){
-      $("#pop5").hide();
-      $("#pop5x").hide();
+  function popUp6() {
+    $("#pop6").show();
     }
-  )
+  setTimeout(popUp6, 48000);
+
+  function popUp7() {
+    $("#pop7").show();
+    }
+  setTimeout(popUp7, 53000);
 
 })
