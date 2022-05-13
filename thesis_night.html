@@ -5,9 +5,9 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
     <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-        <script src="thesis_night.js"></script>-->
+        <script src="thesis_night.js"></script>
     <style>
       #next:link {
         position: fixed;
@@ -196,6 +196,50 @@
        z-index: 10;
        display: none;
       }
+      #yakuzaPop1{
+        position: fixed;
+        width: 20vw;
+        bottom: 5vh;
+        left: 40vw;
+        cursor: pointer;
+        z-index: 11;
+      }
+      #yakuzaPop2{
+        position: fixed;
+        width: 20vw;
+        bottom: 5vh;
+        left: 40vw;
+        cursor: pointer;
+        z-index: 11;
+        display: none;
+      }
+      #geishaPop1{
+        position: fixed;
+        width: 20vw;
+        bottom: 5vh;
+        left: 40vw;
+        cursor: pointer;
+        z-index: 11;
+        display: none;
+      }
+      #samuraiPop1{
+        position: fixed;
+        width: 20vw;
+        bottom: 5vh;
+        left: 40vw;
+        cursor: pointer;
+        z-index: 11;
+        display: none;
+      }
+      #samuraiPop2{
+        position: fixed;
+        width: 20vw;
+        bottom: 5vh;
+        left: 40vw;
+        cursor: pointer;
+        z-index: 11;
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -203,6 +247,11 @@
     <a href="thesis_towers.html"<div id=next>></div></a>
     <div id=help>?</div>
     <div id=instructions>How to Move:<br>Use the arrow keys to move your body.<br>Click and drag the screen to move your head.<br>Walk through the city until you've lost yourself.</div>
+    <img id="yakuzaPop1" src="https://i.imgur.com/n5vYSOY.png"></img>
+    <img id="yakuzaPop2" src="https://i.imgur.com/kUicELO.png"></img>
+    <img id="geishaPop1" src="https://i.imgur.com/YS9CVur.png"></img>
+    <img id="samuraiPop1" src="https://i.imgur.com/vvRadt2.png"></img>
+    <img id="samuraiPop2" src="https://i.imgur.com/mYhJZ3T.png"></img>
     <div id="pop1">As you look into glowing signs of the city, how do you feel?</div>
     <div id="pop2">Do they inspire wonder, anonymity, fear?</div>
     <div id="pop3">Are the signs orienting you to your dreams?</div>
@@ -288,13 +337,8 @@
         position="-18 10 -15" rotation="0 60 0"
         width="4" height="4">
       </a-image>
-      <a-image id="swirly"
-        src="https://i.imgur.com/ZzcNjoz.png"
-        position="0 -2 -3" rotation="-30 30 0"
-        width="6" height="6">
-      </a-image>
       <a-entity id="sushi"
-        position="1 5 20" scale="6 6 6"
+        position="7 5 20" scale="6 6 6"
         geometry="primitive:box;"
         material="shader:gif;src:url(https://i.imgur.com/tjXL74o.gif)">
       </a-entity>
@@ -318,7 +362,7 @@
         animation="property: position; to: -16 5.2 1; dir: alternate; dur: 1000; easing: linear; loop: true"
         width="1.5" height="1.5">
       </a-image>
-      <a-image id="textYakuza"
+      <!--<a-image id="textYakuza"
         src="https://i.imgur.com/O8dGDz5.png"
         position="17 3 2" rotation="0 -90 0"
         width="2" height="2">
@@ -332,8 +376,102 @@
         src="https://i.imgur.com/uoLYIo2.png"
         position="-19 3.5 -1" rotation="0 90 0"
         width="2" height="2">
+      </a-image>-->
+      <a-image id="butterfly"
+        src="https://i.imgur.com/10ZtGtN.png"
+        position="-10 8 16" rotation="0 120 0"
+        width="5" height="5"
+        material.opacity="1"
+        animation__mouseenter="property: material.opacity; to: 0; startEvents: mouseenter; dur: 500";
+        animation__mouseleave="property: material.opacity; to: 1; startEvents: mouseleave; dur: 500";>
       </a-image>
-      <a-sky color="black"></a-sky>
+      <a-image id="geishaAd"
+        src="https://i.imgur.com/6Ziimbh.png"
+        position="4 -1 -5" rotation="0 0 0"
+        width="3" height="3">
+      </a-image>
+      <a-image id="kabukiMask"
+        src="https://i.imgur.com/zvd3RJy.png"
+        position="16 4 15" rotation="0 -120 0"
+        width="5" height="5">
+      </a-image>
+      <a-image id="ramen"
+        src="https://i.imgur.com/JRGzxha.png"
+        position="-14 -1 -8" rotation="0 30 0"
+        width="4" height="4">
+      </a-image>
+      <a-image id="fan"
+        src="https://i.imgur.com/twlkRVS.png"
+        position="-3 -1 12" rotation="0 120 0"
+        width="5" height="5"
+        material.opacity="1"
+        animation__mouseenter="property: material.opacity; to: 0; startEvents: mouseenter; dur: 500";
+        animation__mouseleave="property: material.opacity; to: 1; startEvents: mouseleave; dur: 500";>
+      </a-image>
+      <a-image id="hoteru"
+        src="https://i.imgur.com/bGg4GQg.png"
+        position="-5 5 -3" rotation="0 120 0"
+        animation="property: position; to: -5 6 -3; dir: alternate; dur: 1000; easing: linear; loop: true"
+        width="6" height="6">
+      </a-image>
+      <a-image id="ai"
+        src="https://i.imgur.com/3geZwfS.png"
+        position="5 -1 5" rotation="0 180 0"
+        width="4" height="4">
+      </a-image>
+      <a-image id="drugSign"
+        src="https://i.imgur.com/MDhm6Be.png"
+        position="-23 9 2" rotation="0 90 0"
+        width="3" height="6">
+      </a-image>
+      <a-image id="genericSign1"
+        src="https://i.imgur.com/NflaEO0.png"
+        position="-25 8 -2" rotation="0 90 0"
+        width="3" height="6">
+      </a-image>
+      <a-image id="partySign"
+        src="https://i.imgur.com/ZOCcq3e.png"
+        position="-20 8 3" rotation="0 90 0"
+        width="3" height="6">
+      </a-image>
+      <a-image id="cafeSign"
+        src="https://i.imgur.com/dL5SsVg.png"
+        position="-21 7 -3" rotation="0 90 0"
+        width="3" height="6">
+      </a-image>
+      <a-image id="mangaSign"
+        src="https://i.imgur.com/FPGvGIY.png"
+        position="23 9 2" rotation="0 -90 0"
+        width="3" height="6">
+      </a-image>
+      <a-image id="genericSign1"
+        src="https://i.imgur.com/NflaEO0.png"
+        position="25 8.5 -2" rotation="0 -90 0"
+        width="3" height="6">
+      </a-image>
+      <a-image id="geishaNightSign"
+        src="https://i.imgur.com/DLAWwKD.png"
+        position="20 8 3" rotation="0 -90 0"
+        width="3" height="6">
+      </a-image>
+      <a-image id="beerSign"
+        src="https://i.imgur.com/lkrIKLH.png"
+        position="21 7 -3" rotation="0 -90 0"
+        width="3" height="6">
+      </a-image>
+      <a-entity id="tokyoTower"
+        position="0 15 40" scale="15 30 15"
+        geometry="primitive:box;"
+        material="shader:gif;src:url(https://i.imgur.com/EOzisAr.gif)">
+      </a-entity>
+      <a-link href="thesis_towers.html"
+          <a-entity
+            position="0 1 50"
+            scale=".4 .4 .4"
+            link geometry material>
+          </a-entity>
+      </a-link>
+      <a-sky src="https://i.imgur.com/V96GTp5.png" phi-start="90"></a-sky>
       <a-light type="ambient" color="#f2f2f2"></a-light>
       <a-camera>
         <a-cursor color="white"></a-cursor>
