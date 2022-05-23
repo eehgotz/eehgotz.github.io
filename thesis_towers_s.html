@@ -1,0 +1,398 @@
+<html>
+  <head>
+    <title>Tower District</title>
+    <link rel="shortcut icon" href="https://i.imgur.com/pgXeBAd.png">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="thesis_towers_s.js"></script>
+    <style>
+      #next:link {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 50px;
+        top: 93vh;
+        right: 120px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #next:visited {
+        color: white;
+      }
+      #next:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #help {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 50px;
+        top: 3vh;
+        left: 30px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #help:hover {
+        color: black;
+        background-color:#faebf4;
+        cursor: help;
+      }
+      .btn{
+       cursor:pointer;
+       display:inline-block;
+       text-transform:uppercase;
+       &:after{
+          content:'';
+          display:inline-block;
+       }
+       &.playing{
+           &:after{
+             content:'';
+          }
+       }
+      }
+      #sound1 {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 100px;
+        top: 3vh;
+        right: 230px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #sound1:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #sound2 {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 100px;
+        top: 3vh;
+        right: 130px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #sound2:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #sound3 {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 100px;
+        top: 3vh;
+        right: 30px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #sound3:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #instructions {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 60vw;
+        top: 40vh;
+        left: 20vw;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        font-size: 30px;
+        font-family: "MS Gothic";
+        opacity: .8;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+        display: none;
+      }
+      #pop1{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 30vh;
+       left: 55vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop2{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 75vh;
+       left: 4vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop3{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 8vh;
+       left: 8vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop4{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 77vh;
+       left: 46vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop5{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 40vh;
+       left: 30vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop6{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 15vh;
+       left: 60vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop7{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 61vh;
+       left: 2vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop8{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 27vh;
+       left: 25vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop9{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 65vh;
+       left: 53vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop10{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 63vh;
+       left: 30vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop11{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 15vh;
+       left: 9vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop12{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 72vh;
+       left: -1vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop13{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 50vh;
+       left: 71vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="thesis_transit_s.html"<div id=next>></div></a>
+    <div id=help>?</div>
+    <a class="btn" id="sound1">sound 1</a>
+    <a class="btn" id="sound2">sound 2</a>
+    <a class="btn" id="sound3">sound 3</a>
+    <audio id="sound1A" src="https://cdn.glitch.global/d3420555-5c1a-4310-93d4-0db0fbbcc0a9/mixkit-walking-crowd-at-subway-station-loop-358.wav?v=1646254769712" preload="auto"></audio>
+    <audio id="sound2A" src="https://cdn.glitch.global/d3420555-5c1a-4310-93d4-0db0fbbcc0a9/mixkit-urban-ambient-sound-2465.wav?v=1647894556373" preload="auto"></audio>
+    <audio id="sound3A" src="https://cdn.glitch.global/d3420555-5c1a-4310-93d4-0db0fbbcc0a9/mixkit-future-city-urban-ambience-2926.wav?v=1647894560719" preload="auto"></audio>
+    <div id=instructions>移動方法：<br>矢印キーを使用して 体を移動します。<br>画面を クリックしてドラッグし、頭を 移動します。<br>街を 歩いて 渋谷 スクランブル 交差点まで 行きます。</div>
+    <div id="pop1">What do you think of when we say future?</div>
+    <div id="pop2">Is it flying cars and fembots?</div>
+    <div id="pop3">High-tech cities built by Asian work-ethic?</div>
+    <div id="pop4">Glass skyscrapers filled with office workers, clicking away on mechanical keyboards?</div>
+    <div id="pop5">Media projects societal anxieties of loss of power, without regard for implications of these Other cities and people.</div>
+    <div id="pop6">私たちが 未来を 言うとき、 あなたは どう思いますか？</div>
+    <div id="pop7">空飛ぶ車と ガイノイドですか？</div>
+    <div id="pop8">アジアの 労働倫理に よって構築されたハイテク都市？</div>
+    <div id="pop9">機械式 キーボードを クリックして、サラリーマンでいっぱいの ガラスの 超高層ビル？</div>
+    <div id="pop10">メディアは、これらの 他の 都市や人々の 影響を考慮せずに、権力喪失の 社会的不安を予測しています。</div>
+    <div id="pop11">それは 白人の 問題です。</div>
+    <div id="pop12">とても腹立たしい！</div>
+    <div id="pop13">畜生!</div>
+    <a-scene>
+      <a-sky id="image-360" src="https://i.imgur.com/xyVQyXb.jpg" phi-start="110"></a-sky>
+    </a-scene>
+  </body>
+</html>

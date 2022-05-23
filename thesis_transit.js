@@ -35,36 +35,36 @@ $(document).ready(function() {
     $("#pop1").show();
     $("#pop1x").show();
     }
-  setTimeout(popUp1, 32000);
+  setTimeout(popUp1, 52000);
 
   function popUp2() {
     $("#pop2").show();
     $("#pop2x").show();
     }
-  setTimeout(popUp2, 72000);
+  setTimeout(popUp2, 92000);
 
   function popUp3() {
     $("#pop3").show();
     $("#pop3x").show();
     }
-  setTimeout(popUp3, 112000);
+  setTimeout(popUp3, 132000);
 
   function popUp4() {
     $("#pop4").show();
     $("#pop4x").show();
     }
-  setTimeout(popUp4, 142000);
+  setTimeout(popUp4, 162000);
 
   function popUp5() {
     $("#pop5").show();
     $("#pop5x").show();
     }
-  setTimeout(popUp5, 162000);
+  setTimeout(popUp5, 202000);
 
   function popUp6() {
     $("#pop6").show();
     $("#pop6x").show();
     }
-  setTimeout(popUp6, 167000);
+  setTimeout(popUp6, 212000);
 
 })

@@ -1,0 +1,302 @@
+<html>
+  <head>
+    <title>Tfdi Tsiit Trleogh</title>
+    <link rel="shortcut icon" href="https://i.imgur.com/pgXeBAd.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="thesis_terminal.js"></script>
+    <style>
+      body {
+        background-color: #faebf4;
+      }
+      #next:link {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 50px;
+        top: 93vh;
+        right: 30px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 30;
+      }
+      #next:visited {
+        color: white;
+      }
+      #next:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #help {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 50px;
+        top: 3vh;
+        left: 30px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 30;
+      }
+      #help:hover {
+        color: black;
+        background-color:#faebf4;
+        cursor: help;
+      }
+      #instructions {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 40vw;
+        top: 40vh;
+        left: 30vw;
+        font-size: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: "MS Gothic";
+        opacity: .8;
+        text-align: center;
+        text-decoration: none;
+        z-index: 30;
+        display: none;
+      }
+      #myPicture1 {
+        position: absolute;
+        width: 40vw;
+      }
+      #myPicture2 {
+        position: absolute;
+        width: 40vw;
+      }
+      #myPicture3 {
+        position: absolute;
+        width: 40vw;
+      }
+      #myVideo1 {
+        position: absolute;
+      }
+      #myVideo2 {
+        position: absolute;
+      }
+      #myPicture4 {
+        position: absolute;
+        width: 30vw;
+      }
+      #myPicture5 {
+        position: absolute;
+        width: 30vw;
+      }
+      #myPicture6 {
+        position: absolute;
+        width: 30vw;
+      }
+      #myVideo3 {
+        position: absolute;
+      }
+      #myVideo4 {
+        position: absolute;
+      }
+      #myPicture7 {
+        position: absolute;
+        width: 40vw;
+      }
+      #myPicture8 {
+        position: absolute;
+        width: 40vw;
+      }
+      #myPicture9 {
+        position: absolute;
+        width: 40vw;
+      }
+      #myVideo5 {
+        position: absolute;
+      }
+      #myVideo6 {
+        position: absolute;
+      }
+      #myPicture10 {
+        position: absolute;
+        width: 30vw;
+      }
+      #myPicture11 {
+        position: absolute;
+        width: 30vw;
+      }
+      #myPicture12 {
+        position: absolute;
+        width: 30vw;
+      }
+      #myVideo7 {
+        position: absolute;
+      }
+      #myVideo8 {
+        position: absolute;
+      }
+      #spotify1 {
+        position: fixed;
+        z-index: 20;
+      }
+      #spotify2 {
+        position: fixed;
+        z-index: 20;
+      }
+      .btn{
+       cursor:pointer;
+       display:inline-block;
+       text-transform:uppercase;
+       &:after{
+          content:'';
+          display:inline-block;
+       }
+       &.playing{
+           &:after{
+             content:'';
+          }
+       }
+      }
+      #sound1 {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 100px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #sound1:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #sound2 {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 100px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #sound2:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #sound3 {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 100px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #sound3:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #sound4 {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 100px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #sound4:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="thesis_terminal.html"<div id=next>></div></a>
+    <div id=help>?</div>
+    <div id=instructions>行き過ぎですか？</div>
+    <img src="https://i.imgur.com/4sAdJZ1.png" id="myPicture1" alt="some image">
+    <img src="https://i.imgur.com/90jam6W.png" id="myPicture2" alt="some image">
+    <img src="https://i.imgur.com/4PuVTLU.png" id="myPicture3" alt="some image">
+    <iframe id=myVideo1
+      src="https://player.vimeo.com/video/689028492?h=c338442fad&autoplay=1&loop=1&title=0&byline=0"
+      width="640" height="360" frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+    <iframe id=myVideo2
+      src="https://player.vimeo.com/video/702597406?h=71697c441a&autoplay=1&loop=1&title=0&byline=0"
+      width="640" height="360" frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+    <img src="https://i.imgur.com/4sAdJZ1.png" id="myPicture4" alt="some image">
+    <img src="https://i.imgur.com/90jam6W.png" id="myPicture5" alt="some image">
+    <img src="https://i.imgur.com/4PuVTLU.png" id="myPicture6" alt="some image">
+    <iframe id=myVideo3
+      src="https://player.vimeo.com/video/689028492?h=c338442fad&autoplay=1&loop=1&title=0&byline=0"
+      width="640" height="360" frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+    <iframe id=myVideo4
+      src="https://player.vimeo.com/video/702597406?h=71697c441a&autoplay=1&loop=1&title=0&byline=0"
+      width="640" height="360" frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+    <img src="https://i.imgur.com/4sAdJZ1.png" id="myPicture7" alt="some image">
+    <img src="https://i.imgur.com/90jam6W.png" id="myPicture8" alt="some image">
+    <img src="https://i.imgur.com/4PuVTLU.png" id="myPicture9" alt="some image">
+    <iframe id=myVideo5
+      src="https://player.vimeo.com/video/689028492?h=c338442fad&autoplay=1&loop=1&title=0&byline=0"
+      width="640" height="360" frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+    <iframe id=myVideo6
+      src="https://player.vimeo.com/video/702597406?h=71697c441a&autoplay=1&loop=1&title=0&byline=0"
+      width="640" height="360" frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+    <img src="https://i.imgur.com/4sAdJZ1.png" id="myPicture10" alt="some image">
+    <img src="https://i.imgur.com/90jam6W.png" id="myPicture11" alt="some image">
+    <img src="https://i.imgur.com/4PuVTLU.png" id="myPicture12" alt="some image">
+    <iframe id=myVideo7
+      src="https://player.vimeo.com/video/689028492?h=c338442fad&autoplay=1&loop=1&title=0&byline=0"
+      width="640" height="360" frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+    <iframe id=myVideo8
+      src="https://player.vimeo.com/video/702597406?h=71697c441a&autoplay=1&loop=1&title=0&byline=0"
+      width="640" height="360" frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+    <iframe id=spotify1
+      src="https://open.spotify.com/embed/playlist/3JSg4C4lprvLhjcWJByAtl?utm_source=generator&theme=0"
+      width="50%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+    <iframe id=spotify2
+      src="https://open.spotify.com/embed/playlist/6judYdIlLtU52faW4vCths?utm_source=generator&theme=0"
+      width="50%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+    <a class="btn" id="sound1">sound 1</a>
+    <a class="btn" id="sound2">sound 2</a>
+    <a class="btn" id="sound3">sound 3</a>
+    <a class="btn" id="sound4">sound 4</a>
+    <audio id="sound1A" src="https://cdn.glitch.global/d3420555-5c1a-4310-93d4-0db0fbbcc0a9/New%20Recording%2034.wav?v=1652976106500" preload="auto"></audio>
+    <audio id="sound2A" src="https://cdn.glitch.global/d3420555-5c1a-4310-93d4-0db0fbbcc0a9/mixkit-urban-ambient-sound-2465.wav?v=1647894556373" preload="auto"></audio>
+    <audio id="sound3A" src="https://cdn.glitch.global/d3420555-5c1a-4310-93d4-0db0fbbcc0a9/mixkit-future-city-urban-ambience-2926.wav?v=1647894560719" preload="auto"></audio>
+    <audio id="sound4A" src="https://cdn.glitch.global/d3420555-5c1a-4310-93d4-0db0fbbcc0a9/mixkit-walking-crowd-at-subway-station-loop-358.wav?v=1646254769712" preload="auto"></audio>
+  </body>
+</html>

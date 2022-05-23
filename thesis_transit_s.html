@@ -1,0 +1,386 @@
+<html>
+  <head>
+    <title>Transit District</title>
+    <link rel="shortcut icon" href="https://i.imgur.com/pgXeBAd.png">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="thesis_transit_s.js"></script>
+    <script src="play-on-click.js"></script>
+    <script src="hide-on-play.js"></script>
+    <style>
+      #next:link {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 50px;
+        top: 93vh;
+        right: 120px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #next:visited {
+        color: white;
+      }
+      #next:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #help {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 50px;
+        top: 3vh;
+        left: 30px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #help:hover {
+        color: black;
+        background-color:#faebf4;
+        cursor: help;
+      }
+      #instructions {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 60vw;
+        top: 40vh;
+        left: 20vw;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        font-size: 30px;
+        font-family: "MS Gothic";
+        opacity: .8;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+        display: none;
+      }
+      #pop1{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 75vh;
+       left: 55vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop2{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 80vh;
+       left: 7vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop3{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 4vh;
+       right: 8vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop4{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 17vh;
+       left: 16vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop5{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 30vh;
+       left: 30vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop6{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 60vh;
+       left: 30vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop7{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 84vh;
+       left: 61vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop8{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 72vh;
+       left: 3vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop9{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 16vh;
+       right: -1vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop10{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 21vh;
+       left: 24vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop11{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 21vh;
+       left: 30vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop12{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 77vh;
+       left: 30vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop13{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 50vh;
+       left: -1vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop14{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 61vh;
+       left: 51vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop15{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 12vh;
+       left: 12vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="thesis_night_s.html"<div id=next>></div></a>
+    <div id=help>?</div>
+    <div id=instructions>座って、リラックスして、ショーを楽しんでください。</div>
+    <div id="pop1">As we move around the city, on foot, car, or train, do our perceptions change?</div>
+    <div id="pop2">What is associated with each mode of transit?</div>
+    <div id="pop3">Why do films and shows choose the one they do and as you’re watching, do you feel the motion?</div>
+    <div id="pop4">Do the associations change through time?</div>
+    <div id="pop5">The transitory state of motion, from point a to point b, night to day, as a technique can show progress or modernization, crossing a threshold, or both.</div>
+    <div id="pop6">The city becomes an active racetrack, an obstacle course to be explored and conquered.</div>
+    <div id="pop7">徒歩、 車、 電車で 街を 移動するとき、 私たちの 認識は 変わりますか？</div>
+    <div id="pop8">各輸送モードには 何が 関連付けられていますか？</div>
+    <div id="pop9">なぜ映画やショーは 彼らがするものを 選ぶのですか、 そしてあなたが 見ているとき、 あなたは 動きを 感じますか？</div>
+    <div id="pop10">関連付けは 時間とともに 変化しますか？</div>
+    <div id="pop11">技術が 進歩または 近代化を 示すか、 しきい 値を 超えるか、 またはその 両方を示すことができる、 ポイント a からポイント b まで、夜から日までの一時的な動きの 状態。</div>
+    <div id="pop12">街は活発な 競馬場になり、 探索して 征服する 障害物コースに なります。</div>
+    <div id="pop13">観光客は いつも 速く走ります。</div>
+    <div id="pop14">私たちの 生活を ズームします。</div>
+    <div id="pop15">危険！</div>
+    <a-scene>
+      <a-assets>
+        <video id="video" preload="auto"
+                 src="https://cdn.glitch.me/d3420555-5c1a-4310-93d4-0db0fbbcc0a9/2022_0412%20transit_train_2.mp4?v=1652650470698"
+                 autoplay loop="true"
+                 crossOrigin="anonymous"></video>
+      </a-assets>
+      <a-videosphere
+        rotation="0 -90 0"
+        src="#video"
+        visible="false"
+        play-on-click>
+      </a-videosphere>
+      <a-camera>
+        <a-entity
+          position="0 0 -1.5"
+          text="align: center;
+                width: 6;
+                wrapCount: 100;
+                color: black;
+                value: Click or tap to start video"
+          hide-on-play="#video">
+        </a-entity>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>

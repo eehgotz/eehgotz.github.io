@@ -1,0 +1,396 @@
+<html>
+  <head>
+    <title>Nightlife District</title>
+    <link rel="shortcut icon" href="https://i.imgur.com/pgXeBAd.png">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="thesis_night_s.js"></script>
+    <script src="play-on-click.js"></script>
+    <script src="hide-on-play.js"></script>
+    <style>
+      #next:link {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 50px;
+        top: 93vh;
+        right: 120px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #next:visited {
+        color: white;
+      }
+      #next:hover {
+        color: black;
+        background-color:#faebf4;
+      }
+      #help {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 50px;
+        top: 3vh;
+        left: 30px;
+        font-size: 20px;
+        font-family: "Courier New";
+        opacity: .6;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+      }
+      #help:hover {
+        color: black;
+        background-color:#faebf4;
+        cursor: help;
+      }
+      #instructions {
+        position: fixed;
+        color: white;
+        background-color:#d14e9c;
+        width: 60vw;
+        top: 40vh;
+        left: 20vw;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        font-size: 30px;
+        font-family: "MS Gothic";
+        opacity: .8;
+        text-align: center;
+        text-decoration: none;
+        z-index: 10;
+        display: none;
+      }
+      #spotify {
+        position: fixed;
+        top: 3vh;
+        right: 30px;
+        z-index: 20;
+      }
+      #pop1{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 83vh;
+       right: 55vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop2{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 36vh;
+       left: 16vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop3{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 39vh;
+       right: 19vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop4{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 77vh;
+       left: 60vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop5{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 15vh;
+       left: 29vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop6{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 30vh;
+       left: 30vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop7{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 60vh;
+       left: 30vw;
+       font-size: 30px;
+       font-family: "Courier New";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop8{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 74vh;
+       left: 5vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop9{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 14vh;
+       right: -2vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop10{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 25vh;
+       left: 21vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop11{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 29vh;
+       left: 60vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop12{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 71vh;
+       left: 30vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop13{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 56vh;
+       left: -1vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop14{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 67vh;
+       left: 57vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+      #pop15{
+        cursor:grab;
+       display:inline-block;
+       position: fixed;
+       color: white;
+       background-color:#d14e9c;
+       width: 40vw;
+       top: 14vh;
+       left: 19vw;
+       font-size: 30px;
+       font-family: "MS Gothic";
+       opacity: .8;
+       text-align: center;
+       text-decoration: none;
+       padding: 5px;
+       z-index: 10;
+       display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="thesis_terminal.html"<div id=next>></div></a>
+    <div id=help>?</div>
+    <div id=instructions>移動方法：<br>矢印キーを使用して体を移動します。<br>画面をクリックしてドラッグし、頭を移動します。<br>迷子になるまで街を歩きます。<br><br>会う東京タワーで私。</div>
+    <div id="pop1">As you look into glowing signs of the city, how do you feel?</div>
+    <div id="pop2">Do they inspire wonder, anonymity, fear?</div>
+    <div id="pop3">Are the signs orienting you to your dreams?</div>
+    <div id="pop4">Do you wish they would?</div>
+    <div id="pop5">Have you ever thought about who the lights are for?</div>
+    <div id="pop6">Every step you take is farther from the edge of the known.</div>
+    <div id="pop7">The night life is full of digital lives, but when you are gone do they continue to flash?</div>
+    <div id="pop8">街の輝く兆候を見ていると、どのように感じますか？</div>
+    <div id="pop9">彼らは不思議、匿名性、恐れを刺激しますか？</div>
+    <div id="pop10">兆候はあなたをあなたの夢に向けていますか？</div>
+    <div id="pop11">あなたは彼らがそうすることを望みますか？</div>
+    <div id="pop12">ライトが誰のためのものか考えたことはありますか？</div>
+    <div id="pop13">あなたが取るすべてのステップは、既知の端から遠く離れています。</div>
+    <div id="pop14">ナイトライフはデジタルライフでいっぱいですが、あなたがいなくなっても、彼らは点滅し続けますか？</div>
+    <div id="pop15">自分をサイボーグと呼ぶのは誰ですか？</div>
+    <iframe id=spotify
+      src="https://open.spotify.com/embed/playlist/6judYdIlLtU52faW4vCths?utm_source=generator&theme=0"
+      width="50%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+    <a-scene>
+      <a-assets>
+        <video id="video" preload="auto"
+                 src="https://cdn.glitch.me/d3420555-5c1a-4310-93d4-0db0fbbcc0a9/2022_0518%20nightlife%20v2_1.mp4?v=1652917652860"
+                 autoplay loop="true"
+                 crossOrigin="anonymous"></video>
+      </a-assets>
+      <a-videosphere
+        rotation="0 -149 0"
+        src="#video"
+        visible="false"
+        play-on-click>
+      </a-videosphere>
+      <a-camera>
+        <a-entity
+          position="0 0 -1.5"
+          text="align: center;
+                width: 6;
+                wrapCount: 100;
+                color: black;
+                value: Click or tap to start video"
+          hide-on-play="#video">
+        </a-entity>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>

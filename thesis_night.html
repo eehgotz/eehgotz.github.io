@@ -202,6 +202,7 @@
         bottom: 5vh;
         left: 40vw;
         cursor: pointer;
+        animation: pulse 1s infinite;
         z-index: 11;
       }
       #yakuzaPop2{
@@ -210,7 +211,8 @@
         bottom: 5vh;
         left: 40vw;
         cursor: pointer;
-        z-index: 11;
+        animation: pulse 1s infinite;
+        z-index: 12;
         display: none;
       }
       #geishaPop1{
@@ -219,7 +221,8 @@
         bottom: 5vh;
         left: 40vw;
         cursor: pointer;
-        z-index: 11;
+        animation: pulse 1s infinite;
+        z-index: 13;
         display: none;
       }
       #samuraiPop1{
@@ -228,7 +231,8 @@
         bottom: 5vh;
         left: 40vw;
         cursor: pointer;
-        z-index: 11;
+        animation: pulse 1s infinite;
+        z-index: 14;
         display: none;
       }
       #samuraiPop2{
@@ -237,17 +241,27 @@
         bottom: 5vh;
         left: 40vw;
         cursor: pointer;
-        z-index: 11;
+        animation: pulse 1s infinite;
+        z-index: 15;
         display: none;
+      }
+      @keyframes pulse {
+        0% {
+          width: 20vw;
+        }
+        100% {
+          width: 21vw;
+          left:39.5vw;
+        }
       }
     </style>
   </head>
   <body>
     <!--<a href="thesis_transit.html"<div id=back><</div></a>-->
-    <a href="thesis_towers.html"<div id=next>></div></a>
+    <a href="thesis_towers_s.html"<div id=next>></div></a>
     <div id=help>?</div>
-    <div id=instructions>How to Move:<br>Use the arrow keys to move your body.<br>Click and drag the screen to move your head.<br>Walk through the city until you've lost yourself.</div>
-    <img id="yakuzaPop1" src="https://i.imgur.com/n5vYSOY.png"></img>
+    <div id=instructions>How to Move:<br>Use the arrow keys to move your body.<br>Click and drag the screen to move your head.<br>Walk through the city until you've lost yourself.<br><br>Meet me at Tokyo Tower.</div>
+    <img id="yakuzaPop1" src="https://i.imgur.com/4PuVTLU.png"></img>
     <img id="yakuzaPop2" src="https://i.imgur.com/kUicELO.png"></img>
     <img id="geishaPop1" src="https://i.imgur.com/YS9CVur.png"></img>
     <img id="samuraiPop1" src="https://i.imgur.com/vvRadt2.png"></img>
@@ -464,7 +478,7 @@
         geometry="primitive:box;"
         material="shader:gif;src:url(https://i.imgur.com/EOzisAr.gif)">
       </a-entity>
-      <a-link href="thesis_towers.html"
+      <a-link href="thesis_towers_s.html"
           <a-entity
             position="0 1 50"
             scale=".4 .4 .4"
